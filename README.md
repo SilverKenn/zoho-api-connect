@@ -75,15 +75,15 @@ https://wpquark.com/kb/fsqm/fsqm-api/fsqm-pro-developers-handbook/
 
 Due to data structure complexity, I ended up creating two functions to pull the specific value from the data being provided by eforms 
 
+get and pull array key value form an array to a different array with connected keys
 ````php
-//get and pull array key value form an array to a different array with connected keys
 function _mpp( $d, $type, $id, $options = 'label' ) {
 	if ( isset( $d[$type][$id] ) && isset( $d['data']->$type[$id] ) && isset( $d['data']->$type[$id]['options'][0] ) && $d['data']->$type[$id]['options'][0] !== '' )
 		return $d[$type][$id]['settings']['options'][ $d['data']->$type[$id]['options'][0] ][$options];
 }
 ````
+Pull array key value from specific object
 ````php
-// Pull array key value from specific object
 function _gmp( $keys, $id = 0, $key = 'value' ) {
 	if ( isset( $keys[$id][$key] ) ) return $keys[$id][$key];
 }
