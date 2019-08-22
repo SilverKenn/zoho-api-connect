@@ -61,10 +61,10 @@ $directory - directory the log will be stored ( default value: '/logs' )
 
 ### example usage
 
-In the above example, we stored the request to $send variable, we can simply save the variable content into a log file 
+In the above example, we stored the request response to $send variable, we can then simply save the variable content into a log file 
 
 ````php
-zh_API::log( 'data.json', json_encode($d), 0, 1 );
+zh_API::log( 'data.json', json_encode($send), 0, 1 );
 ````
 This will create a file or append the $send content to a file wp-cotentnt/plugins/zoho-api/logs/data.json
 
